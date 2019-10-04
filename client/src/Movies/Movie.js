@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard.js';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
@@ -20,7 +20,7 @@ const Movie = (props) => {
   
   const saveMovie = () => {
     const addToSavedList = props.addToSavedList;
-    addToSavedList(<Link to={`/${movie.id}`} key={movie.id}>{movie.title}</Link>);
+    addToSavedList(<NavLink to={`/${movie.id}`} key={movie.id} activeClassName="activeNavButton">{movie.title}</NavLink>);
   }
 
   if (!movie) {
