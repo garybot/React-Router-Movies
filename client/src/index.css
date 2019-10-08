@@ -70,3 +70,10 @@ body {
   padding: 5px 10px;
   background-color: lightskyblue;
 }
+
+.activeNavButton {
+  background-color: navy;
+  padding: 5px;
+  border: 2px solid yellow;
+  color: ivory;
+}
